@@ -1,0 +1,15 @@
+# Environment and local configuration
+.env
+config.local.php
+
+# User uploads
+/uploads/*
+
+# Keep uploads directory in Git
+!/uploads/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
