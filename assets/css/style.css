@@ -565,6 +565,21 @@ a {
         );
 }
 
+.project-image-rag {
+    background:
+        radial-gradient(
+            circle at 72% 28%,
+            rgba(255, 255, 255, 0.22),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #142e6d 0%,
+            #2454b8 55%,
+            #6288d5 100%
+        );
+}
+
 .project-body {
     padding: 19px;
 }
@@ -1793,6 +1808,21 @@ a {
 
 /* Temporary project visuals */
 
+.portfolio-cover-rag {
+    background:
+        radial-gradient(
+            circle at 72% 30%,
+            rgba(255, 255, 255, 0.24),
+            transparent 27%
+        ),
+        linear-gradient(
+            145deg,
+            #142e6d 0%,
+            #2454b8 52%,
+            #6288d5 100%
+        );
+}
+
 .portfolio-cover-service {
     background:
         radial-gradient(
@@ -2005,7 +2035,7 @@ a {
 @media (min-width: 1100px) {
 
     .portfolio-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 26px;
     }
 

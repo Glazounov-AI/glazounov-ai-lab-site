@@ -119,13 +119,45 @@
                     <h2>Реальные решения, а не просто идеи</h2>
                 </div>
 
-                <a href="/portfolio/">Смотреть все проекты &rarr;></a>
+                <a href="/portfolio/">Смотреть все проекты &rarr;</a>
 
             </div>
 
 
             <div class="project-grid">
 
+				<!-- RAG ASSISTANT -->
+				<article class="project-card">
+
+					<div class="project-image project-image-rag">
+						<span>RAG Assistant</span>
+					</div>
+
+					<div class="project-body">
+
+						<h3>RAG Assistant</h3>
+
+						<p>
+							AI-ассистент с поиском по базе знаний,
+							кэшированием и SQLite-логированием.
+							OpenAI-редакция развёрнута на Railway.
+						</p>
+
+						<a href="/portfolio/rag-assistant/">
+							Подробнее &rarr;
+						</a>
+
+						<div class="tags">
+							<span>RAG</span>
+							<span>OpenAI API</span>
+							<span>Railway</span>
+						</div>
+
+					</div>
+
+				</article>
+
+				<!-- AI IT SERVICE DESK -->
                 <article class="project-card">
 
                     <div class="project-image project-image-one">
@@ -153,6 +185,7 @@
                 </article>
 
 
+				<!-- INTERVIEW ASSISTANT -->
                 <article class="project-card">
 
                     <div class="project-image project-image-two">
@@ -173,33 +206,6 @@
                         <div class="tags">
                             <span>Анализ вакансий</span>
                             <span>Подготовка</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <div class="project-image project-image-three">
-                        <span>A/B Prompt Test</span>
-                    </div>
-
-                    <div class="project-body">
-
-                        <h3>A/B-тестирование AI-промптов</h3>
-
-                        <p>
-                            Автоматизированное сравнение вариантов
-                            промптов по заданным метрикам качества.
-                        </p>
-
-                        <a href="#">Подробнее ></a>
-
-                        <div class="tags">
-                            <span>A/B-тестирование</span>
-                            <span>Метрики</span>
                         </div>
 
                     </div>
@@ -283,8 +289,6 @@
         <nav>
             <a href="#">Telegram</a>
             <a href="https://github.com/Glazounov-AI">GitHub</a>
-            <!--a href="#">Обработка персональных данных</a>
-            <a href="#">Условия использования</a-->
         </nav>
 
     </div>

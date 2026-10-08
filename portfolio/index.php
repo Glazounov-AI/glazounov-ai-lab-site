@@ -89,6 +89,58 @@
 
             <div class="portfolio-grid">
 
+				<!-- RAG ASSISTANT -->
+				<article class="portfolio-card">
+
+					<a
+						class="portfolio-card-cover portfolio-cover-rag"
+						href="rag-assistant/"
+						aria-label="Открыть проект RAG Assistant"
+					>
+						<div class="portfolio-cover-content">
+							<span>RAG SYSTEM</span>
+							<strong>RAG ASSISTANT</strong>
+						</div>
+					</a>
+
+					<div class="portfolio-card-body">
+
+						<div class="portfolio-card-tags">
+							<span>RAG</span>
+							<span>OpenAI API</span>
+							<span>ChromaDB</span>
+						</div>
+
+						<h2>
+							<a href="rag-assistant/">
+								RAG Assistant
+							</a>
+						</h2>
+
+						<p>
+							AI-ассистент с поиском по базе знаний,
+							кэшированием ответов и SQLite-логированием.
+							Серверная часть реализована, OpenAI-редакция
+							развёрнута на Railway.
+						</p>
+
+						<div class="portfolio-card-footer">
+							<span class="portfolio-card-status">
+								Backend · Deployed on Railway
+							</span>
+
+							<a
+								class="portfolio-card-link"
+								href="rag-assistant/"
+							>
+								Подробнее &rarr;
+							</a>
+						</div>
+
+					</div>
+				</article>
+
+
                 <!-- AI IT SERVICE DESK -->
                 <article class="portfolio-card">
 
@@ -145,7 +197,7 @@
                     <div class="portfolio-card-cover portfolio-cover-interview">
                         <div class="portfolio-cover-content">
                             <span>AI</span>
-                            <strong>INTERVIEW<br>ASSISTANT</strong>
+                            <strong>INTERVIEW ASSISTANT</strong>
                         </div>
                     </div>
 
@@ -184,7 +236,7 @@
                     <div class="portfolio-card-cover portfolio-cover-testing">
                         <div class="portfolio-cover-content">
                             <span>AI PROMPTS</span>
-                            <strong>A / B<br>TESTING</strong>
+                            <strong>A / B TESTING</strong>
                         </div>
                     </div>
 
