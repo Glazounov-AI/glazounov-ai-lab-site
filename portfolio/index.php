@@ -89,56 +89,56 @@
 
             <div class="portfolio-grid">
 
-				<!-- RAG ASSISTANT -->
-				<article class="portfolio-card">
+                <!-- RAG ASSISTANT -->
+                <article class="portfolio-card">
 
-					<a
-						class="portfolio-card-cover portfolio-cover-rag"
-						href="rag-assistant/"
-						aria-label="Открыть проект RAG Assistant"
-					>
-						<div class="portfolio-cover-content">
-							<span>RAG SYSTEM</span>
-							<strong>RAG ASSISTANT</strong>
-						</div>
-					</a>
+                    <a
+                        class="portfolio-card-cover portfolio-cover-rag"
+                        href="rag-assistant/"
+                        aria-label="Открыть проект RAG Assistant"
+                        >
+                        <div class="portfolio-cover-content">
+                            <span>RAG SYSTEM</span>
+                            <strong>RAG ASSISTANT</strong>
+                        </div>
+                    </a>
 
-					<div class="portfolio-card-body">
+                    <div class="portfolio-card-body">
 
-						<div class="portfolio-card-tags">
-							<span>RAG</span>
-							<span>OpenAI API</span>
-							<span>ChromaDB</span>
-						</div>
+                        <div class="portfolio-card-tags">
+                            <span>RAG</span>
+                            <span>OpenAI API</span>
+                            <span>ChromaDB</span>
+                        </div>
 
-						<h2>
-							<a href="rag-assistant/">
-								RAG Assistant
-							</a>
-						</h2>
+                        <h2>
+                            <a href="rag-assistant/">
+                                RAG Assistant
+                            </a>
+                        </h2>
 
-						<p>
-							AI-ассистент с поиском по базе знаний,
-							кэшированием ответов и SQLite-логированием.
-							Серверная часть реализована, OpenAI-редакция
-							развёрнута на Railway.
-						</p>
+                        <p>
+                            AI-ассистент с поиском по базе знаний,
+                            кэшированием ответов и SQLite-логированием.
+                            Серверная часть реализована, OpenAI-редакция
+                            развёрнута на Railway.
+                        </p>
 
-						<div class="portfolio-card-footer">
-							<span class="portfolio-card-status">
-								Backend · Deployed on Railway
-							</span>
+                        <div class="portfolio-card-footer">
+                            <span class="portfolio-card-status">
+                                Backend · Deployed on Railway
+                            </span>
 
-							<a
-								class="portfolio-card-link"
-								href="rag-assistant/"
-							>
-								Подробнее &rarr;
-							</a>
-						</div>
+                            <a
+                                class="portfolio-card-link"
+                                href="rag-assistant/"
+                                >
+                                Подробнее &rarr;
+                            </a>
+                        </div>
 
-					</div>
-				</article>
+                    </div>
+                </article>
 
 
                 <!-- AI IT SERVICE DESK -->
@@ -233,12 +233,16 @@
                 <!-- A/B PROMPT TESTING -->
                 <article class="portfolio-card">
 
-                    <div class="portfolio-card-cover portfolio-cover-testing">
+                    <a class="portfolio-card-cover portfolio-cover-testing"
+                        href="ab-prompt-test/"
+                        aria-label="Открыть проект A/B Prompt Testing"
+                        >
+
                         <div class="portfolio-cover-content">
                             <span>AI PROMPTS</span>
                             <strong>A / B TESTING</strong>
                         </div>
-                    </div>
+                    </a>
 
                     <div class="portfolio-card-body">
 
@@ -247,7 +251,11 @@
                             <span>Evaluation</span>
                         </div>
 
-                        <h2>A/B-тестирование AI-промптов</h2>
+                        <h2>
+                            <a href="ab-prompt-test/">
+                                A/B-тестирование AI-промптов
+                            </a>
+                        </h2>
 
                         <p>
                             Автоматизированное сравнение вариантов промптов
@@ -260,9 +268,9 @@
                                 Готовый проект
                             </span>
 
-                            <span class="portfolio-card-link">
+                            <a class="portfolio-card-link" href="ab-prompt-test/">
                                 Подробнее &rarr;
-                            </span>
+                            </a>
                         </div>
 
                     </div>
