@@ -126,38 +126,38 @@
 
             <div class="project-grid">
 
-				<!-- RAG ASSISTANT -->
-				<article class="project-card">
+                <!-- RAG ASSISTANT -->
+                <article class="project-card">
 
-					<div class="project-image project-image-rag">
-						<span>RAG Assistant</span>
-					</div>
+                    <div class="project-image project-image-rag">
+                        <span>RAG Assistant</span>
+                    </div>
 
-					<div class="project-body">
+                    <div class="project-body">
 
-						<h3>RAG Assistant</h3>
+                        <h3>RAG Assistant</h3>
 
-						<p>
-							AI-ассистент с поиском по базе знаний,
-							кэшированием и SQLite-логированием.
-							OpenAI-редакция развёрнута на Railway.
-						</p>
+                        <p>
+                            AI-ассистент с поиском по базе знаний,
+                            кэшированием и SQLite-логированием.
+                            OpenAI-редакция развёрнута на Railway.
+                        </p>
 
-						<a href="/portfolio/rag-assistant/">
-							Подробнее &rarr;
-						</a>
+                        <a href="/portfolio/rag-assistant/">
+                            Подробнее &rarr;
+                        </a>
 
-						<div class="tags">
-							<span>RAG</span>
-							<span>OpenAI API</span>
-							<span>Railway</span>
-						</div>
+                        <div class="tags">
+                            <span>RAG</span>
+                            <span>OpenAI API</span>
+                            <span>Railway</span>
+                        </div>
 
-					</div>
+                    </div>
 
-				</article>
+                </article>
 
-				<!-- AI IT SERVICE DESK -->
+                <!-- AI IT SERVICE DESK -->
                 <article class="project-card">
 
                     <div class="project-image project-image-one">
@@ -185,27 +185,30 @@
                 </article>
 
 
-				<!-- INTERVIEW ASSISTANT -->
+                <!-- AI INTERVIEW COACH -->
                 <article class="project-card">
 
                     <div class="project-image project-image-two">
-                        <span>Interview Assistant</span>
+                        <span>AI Interview Coach</span>
                     </div>
 
                     <div class="project-body">
 
-                        <h3>AI-ассистент подготовки к собеседованию</h3>
+                        <h3>AI Interview Coach</h3>
 
                         <p>
-                            Помощник для анализа вакансий и системной
-                            подготовки кандидата к интервью.
+                            AI-ассистент для анализа вакансий,
+                            подготовки к собеседованиям и тренировки
+                            ответов по методу STAR.
                         </p>
 
-                        <a href="#">Подробнее ></a>
+                        <a href="/portfolio/interview-assistant/">
+                            Подробнее &rarr;
+                        </a>
 
                         <div class="tags">
-                            <span>Анализ вакансий</span>
-                            <span>Подготовка</span>
+                            <span>Prompt Engineering</span>
+                            <span>File Search</span>
                         </div>
 
                     </div>

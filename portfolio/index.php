@@ -191,15 +191,19 @@
                 </article>
 
 
-                <!-- INTERVIEW COACH -->
+                <!-- AI INTERVIEW COACH -->
                 <article class="portfolio-card">
 
-                    <div class="portfolio-card-cover portfolio-cover-interview">
+                    <a
+                        class="portfolio-card-cover portfolio-cover-interview"
+                        href="interview-assistant/"
+                        aria-label="Открыть проект AI Interview Coach"
+                        >
                         <div class="portfolio-cover-content">
                             <span>AI</span>
                             <strong>INTERVIEW COACH</strong>
                         </div>
-                    </div>
+                    </a>
 
                     <div class="portfolio-card-body">
 
@@ -208,7 +212,9 @@
                             <span>Prompt Engineering</span>
                         </div>
 
-                        <h2>AI Interview Coach</h2>
+                        <h2>
+                            <a href="interview-assistant/">AI Interview Coach</a>
+                        </h2>
 
                         <p>
                             Ассистент для подготовки кандидатов:
