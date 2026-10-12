@@ -40,6 +40,7 @@
                     </div>
                     <div class="project-actions">
                         <a class="project-action-link" href="https://github.com/Glazounov-AI/RAG_Assistant" target="_blank" rel="noopener noreferrer">GitHub <span class="external-icon" aria-hidden="true">↗</span></a>
+                        <a class="project-action-link" href="https://ragassistant-production-6923.up.railway.app/docs" target="_blank" rel="noopener noreferrer">Демо API <span class="external-icon" aria-hidden="true">↗</span></a>
                         <a class="project-action-link" href="#materials">Документация</a>
                     </div>
                 </div>
