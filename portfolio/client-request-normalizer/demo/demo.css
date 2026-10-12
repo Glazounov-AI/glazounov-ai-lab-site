@@ -1,0 +1,33 @@
+.demo-disclaimer{max-width:850px;padding:12px 16px;border-left:3px solid #6d86c7;background:rgba(109,134,199,.09);border-radius:4px}
+.demo-muted{opacity:.75}.demo-chart{display:grid;gap:18px;margin:28px 0 16px}.demo-metric{display:grid;grid-template-columns:minmax(140px,220px) 1fr;align-items:center;gap:16px}.demo-metric-label{font-weight:650}.demo-bars{display:grid;gap:6px}.demo-bar-track{height:24px;background:rgba(128,128,128,.12);border-radius:5px;overflow:hidden}.demo-bar{height:100%;min-width:0;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;box-sizing:border-box;color:#fff;font-size:12px;font-weight:700;white-space:nowrap}.demo-bar.baseline,.demo-swatch.baseline{background:#64748b}.demo-bar.lora,.demo-swatch.lora{background:#227b73}.demo-bar-label{font-size:12px;margin-left:8px}.demo-bar-row{display:flex;align-items:center;gap:8px}.demo-bar-track{flex:1}.demo-bar-value{width:55px;text-align:right;font-variant-numeric:tabular-nums}.demo-legend{display:flex;gap:20px;margin-bottom:12px}.demo-legend span{display:flex;align-items:center;gap:8px}.demo-swatch{display:inline-block;width:13px;height:13px;border-radius:3px}.demo-picker{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:18px 0}.demo-picker label{font-weight:700}.demo-picker select{max-width:100%;min-width:min(520px,100%);padding:10px;border:1px solid #9ca3af;border-radius:7px;background:var(--surface,#fff);color:var(--text,#222)}.demo-query,.demo-panel{border:1px solid rgba(128,128,128,.25);border-radius:12px;padding:18px;margin:14px 0}.demo-query p{white-space:pre-wrap}.demo-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.demo-panel{min-width:0;margin:0}.demo-panel h3,.demo-query h3{margin-top:0}.demo-panel pre{overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.55;margin:10px 0 0}.demo-reference,.demo-fields{margin-top:18px}.demo-status{font-size:13px;display:flex;gap:8px;flex-wrap:wrap}.demo-status span{padding:3px 8px;border-radius:20px;background:rgba(128,128,128,.14)}.demo-status .ok{background:rgba(34,139,94,.15)}.demo-status .bad{background:rgba(200,65,65,.15)}.demo-table-wrap{overflow-x:auto}.demo-table{border-collapse:collapse;width:100%;font-size:13px}.demo-table th,.demo-table td{text-align:left;vertical-align:top;padding:9px;border-bottom:1px solid rgba(128,128,128,.2);overflow-wrap:anywhere;max-width:280px}.demo-table .match{color:#18734e}.demo-table .mismatch{color:#b44242}.demo-error{color:#b44242;font-weight:700}@media(max-width:760px){.demo-columns{grid-template-columns:1fr}.demo-metric{grid-template-columns:1fr;gap:5px}.demo-picker select{min-width:100%}}
+/* Compact layout for Client Request Normalizer demo */
+
+.project-hero {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.project-section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.project-back {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 719px) {
+    .project-hero {
+        padding-top: 20px;
+        padding-bottom: 24px;
+    }
+
+    .project-section {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .project-back {
+        margin-bottom: 16px;
+    }
+}

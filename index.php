@@ -1,50 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+$pageTitle = 'Glazounov AI Lab — AI-решения и автоматизация';
+$pageType = 'home';
 
-    <title>Glazounov AI Lab — AI-решения и автоматизация</title>
-
-    <link rel="icon"
-        href="assets/icons/favicon.svg"
-        type="image/svg+xml">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-
-<header class="site-header">
-    <div class="container header-inner">
-
-        <a class="brand" href="#top">
-            <span class="brand-mark" aria-hidden="true">
-                <i></i><i></i><i></i>
-            </span>
-
-            <span>
-                <b>GLAZOUNOV</b>
-                <small>AI LAB</small>
-            </span>
-        </a>
-
-        <nav class="main-nav">
-            <a href="#projects">Проекты</a>
-            <a href="#about">Обо мне</a>
-            <a class="nav-cta" href="#contact">
-                Связаться
-            </a>
-        </nav>
-
-        <button class="menu-button" aria-label="Открыть меню">?</button>
-
-    </div>
-</header>
-
+require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+?>
 
 <main id="top">
-
     <section class="hero">
         <div class="container hero-grid">
 
@@ -270,33 +231,6 @@
 </main>
 
 
-<footer class="site-footer">
-
-    <div class="container footer-inner">
-
-        <a class="brand brand-small" href="#top">
-
-            <span class="brand-mark">
-                <i></i><i></i><i></i>
-            </span>
-
-            <span>
-                <b>GLAZOUNOV</b>
-                <small>AI LAB</small>
-            </span>
-
-        </a>
-
-        <p>© 2026 Glazounov AI Lab.</p>
-
-        <nav>
-            <a href="#">Telegram</a>
-            <a href="https://github.com/Glazounov-AI">GitHub</a>
-        </nav>
-
-    </div>
-
-</footer>
-
-</body>
-</html>
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+?>

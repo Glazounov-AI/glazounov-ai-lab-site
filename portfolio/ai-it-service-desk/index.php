@@ -1,61 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+$pageTitle = 'AI IT Service Desk — Glazounov AI Lab';
+$pageDescription = 'AI IT Service Desk — AI-ассистент первой линии внутренней IT-поддержки с Knowledge Base, маршрутизацией и контролируемой эскалацией.';
+$pageType = 'project';
 
-    <title>AI IT Service Desk — Glazounov AI Lab</title>
-
-    <meta
-        name="description"
-        content="AI IT Service Desk — AI-ассистент первой линии внутренней IT-поддержки с Knowledge Base, маршрутизацией и контролируемой эскалацией."
-    >
-
-    <link
-        rel="icon"
-        href="../../assets/icons/favicon.svg"
-        type="image/svg+xml"
-    >
-
-    <link
-        rel="stylesheet"
-        href="../../assets/css/style.css"
-    >
-</head>
-
-<body>
-
-<header class="site-header">
-    <div class="container header-inner">
-
-        <a class="brand" href="../../index.php" aria-label="Glazounov AI Lab — главная">
-            <span class="brand-mark" aria-hidden="true">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-
-            <span class="brand-text">
-                <strong>GLAZOUNOV</strong>
-                <small>AI LAB</small>
-            </span>
-        </a>
-
-        <nav class="main-nav" aria-label="Основная навигация">
-            <a href="../../index.php#projects">Проекты</a>
-            <a href="../../index.php#about">Обо мне</a>
-            <a class="btn btn-small" href="../../index.php#contact">
-                Связаться
-            </a>
-        </nav>
-
-        <button class="menu-button" type="button" aria-label="Открыть меню">
-            ?
-        </button>
-
-    </div>
-</header>
-
+require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+?>
 
 <main>
 
@@ -508,58 +457,14 @@
     <!-- PROJECT NAVIGATION -->
     <nav class="project-navigation" aria-label="Навигация по проектам">
         <div class="container project-navigation-inner">
-
-            <a href="#">
-                <small>Предыдущий проект</small>
-                <strong>< A/B Prompt Test</strong>
-            </a>
-
-            <a
-                class="all-projects-link"
-                href="/portfolio/"
-            >
-                Все проекты
-            </a>
-
-            <a class="project-next" href="#">
-                <small>Следующий проект</small>
-                <strong>AI Interview Assistant ></strong>
-            </a>
-
+            <span aria-hidden="true"></span>
+            <a class="all-projects-link" href="/portfolio/">Все проекты</a>
+            <span aria-hidden="true"></span>
         </div>
     </nav>
 
 </main>
 
-
-<footer class="site-footer">
-
-    <div class="container footer-inner">
-
-        <a class="brand brand-small" href="#top">
-
-            <span class="brand-mark">
-                <i></i><i></i><i></i>
-            </span>
-
-            <span>
-                <b>GLAZOUNOV</b>
-                <small>AI LAB</small>
-            </span>
-
-        </a>
-
-        <p>© 2026 Glazounov AI Lab.</p>
-
-        <nav>
-            <a href="#">Telegram</a>
-            <a href="https://github.com/Glazounov-AI">GitHub</a>
-        </nav>
-
-    </div>
-
-</footer>
-
-
-</body>
-</html>
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+?>

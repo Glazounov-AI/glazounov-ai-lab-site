@@ -1,32 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Interview Coach — Glazounov AI Lab</title>
-    <meta name="description" content="AI-ассистент для подготовки к собеседованиям: анализ вакансий, пробные интервью, метод STAR и обратная связь на основе базы знаний.">
-    <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-</head>
+﻿<?php
+$pageTitle = 'AI Interview Coach — Glazounov AI Lab';
+$pageDescription = 'AI-ассистент для подготовки к собеседованиям: анализ вакансий, пробные интервью, метод STAR и обратная связь на основе базы знаний.';
+$pageType = 'project';
 
-<body>
-<header class="site-header">
-    <div class="container header-inner">
-        <a class="brand" href="../../index.php" aria-label="Glazounov AI Lab — главная">
-            <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="brand-text">
-                <strong>GLAZOUNOV</strong>
-                <small>AI LAB</small>
-            </span>
-        </a>
-        <nav class="main-nav" aria-label="Основная навигация">
-            <a href="../../index.php#projects">Проекты</a>
-            <a href="../../index.php#about">Обо мне</a>
-            <a class="btn btn-small" href="../../index.php#contact">Связаться</a>
-        </nav>
-        <button class="menu-button" type="button" aria-label="Открыть меню">☰</button>
-    </div>
-</header>
+require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+?>
 
 <main>
     <!-- HERO -->
@@ -344,18 +322,6 @@
     </nav>
 </main>
 
-<footer class="site-footer">
-    <div class="container footer-inner">
-        <a class="brand brand-small" href="../../index.php">
-            <span class="brand-mark"><i></i><i></i><i></i></span>
-            <span><b>GLAZOUNOV</b><small>AI LAB</small></span>
-        </a>
-        <p>© 2026 Glazounov AI Lab.</p>
-        <nav>
-            <a href="#">Telegram</a>
-            <a href="https://github.com/Glazounov-AI">GitHub</a>
-        </nav>
-    </div>
-</footer>
-</body>
-</html>
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+?>

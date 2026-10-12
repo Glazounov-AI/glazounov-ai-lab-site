@@ -1,64 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+$pageTitle = 'Проекты — Glazounov AI Lab';
+$pageDescription = 'Проекты Glazounov AI Lab: AI-ассистенты, автоматизация, RAG и практические решения на основе искусственного интеллекта.';
+$pageType = 'project';
 
-    <title>Проекты — Glazounov AI Lab</title>
-
-    <meta
-        name="description"
-        content="Проекты Glazounov AI Lab: AI-ассистенты, автоматизация, RAG и практические решения на основе искусственного интеллекта."
-    >
-
-    <link
-        rel="icon"
-        href="../assets/icons/favicon.svg"
-        type="image/svg+xml"
-    >
-
-    <link
-        rel="stylesheet"
-        href="../assets/css/style.css"
-    >
-</head>
-
-<body>
-
-<header class="site-header">
-    <div class="container header-inner">
-
-        <a class="brand" href="../index.php" aria-label="Glazounov AI Lab — главная">
-            <span class="brand-mark" aria-hidden="true">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-
-            <span class="brand-text">
-                <strong>GLAZOUNOV</strong>
-                <small>AI LAB</small>
-            </span>
-        </a>
-
-        <nav class="main-nav" aria-label="Основная навигация">
-            <a href="../index.php#projects">Проекты</a>
-            <a href="../index.php#about">Обо мне</a>
-            <a class="btn btn-small" href="../index.php#contact">
-                Связаться
-            </a>
-        </nav>
-
-        <button class="menu-button" type="button" aria-label="Открыть меню">
-            ?
-        </button>
-
-    </div>
-</header>
-
+require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+?>
 
 <main>
-
     <!-- PORTFOLIO HERO -->
     <section class="portfolio-hero">
         <div class="container">
@@ -282,6 +230,54 @@
                     </div>
                 </article>
 
+                <!-- CLIENT REQUEST NORMALIZER -->
+                <article class="portfolio-card">
+
+                    <a class="portfolio-card-cover portfolio-cover-normalizer"
+                       href="client-request-normalizer/"
+                       aria-label="Открыть проект Client Request Normalizer">
+                        <div class="portfolio-cover-content">
+                            <span>ML / FINE-TUNING</span>
+                            <strong>CLIENT REQUEST NORMALIZER</strong>
+                        </div>
+                    </a>
+
+                    <div class="portfolio-card-body">
+
+                        <div class="portfolio-card-tags">
+                            <span>Qwen2.5</span>
+                            <span>LoRA</span>
+                            <span>Evaluation</span>
+                        </div>
+
+                        <h2>
+                            <a href="client-request-normalizer/">
+                                Client Request Normalizer
+                            </a>
+                        </h2>
+
+                        <p>
+                            Дообучение языковой модели для преобразования
+                            клиентских запросов в структурированный JSON.
+                            Сравнение Baseline и LoRA на 15 тестовых примерах
+                            с визуализацией метрик и исходных ответов.
+                        </p>
+
+                        <div class="portfolio-card-footer">
+                            <span class="portfolio-card-status">
+                                v1.0.0 · LoRA Experiment
+                            </span>
+
+                            <a class="portfolio-card-link"
+                               href="client-request-normalizer/">
+                                Подробнее &rarr;
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+
+            <!--КОНЕЦ СЕТКИ ПОРТФОЛИО-->
             </div>
 
         </div>
@@ -303,7 +299,7 @@
                     </p>
                 </div>
 
-                <a class="btn btn-primary" href="../index.php#contact">
+                <a class="button primary" href="/index.php#contact">
                     Связаться
                 </a>
 
@@ -315,38 +311,6 @@
 </main>
 
 
-<footer class="site-footer">
-
-    <div class="container footer-inner">
-
-        <a class="brand brand-small" href="../index.php">
-            <span class="brand-mark">
-                <i></i><i></i><i></i>
-            </span>
-
-            <span>
-                <b>GLAZOUNOV</b>
-                <small>AI LAB</small>
-            </span>
-        </a>
-
-        <p>© 2026 Glazounov AI Lab.</p>
-
-        <nav>
-            <a href="#">Telegram</a>
-
-            <a
-                href="https://github.com/Glazounov-AI"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub
-            </a>
-        </nav>
-
-    </div>
-
-</footer>
-
-</body>
-</html>
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+?>
