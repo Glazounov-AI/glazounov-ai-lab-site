@@ -77,21 +77,71 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    form.addEventListener("submit", (event) => {
+    let requestInProgress = false;
+
+    form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         const query = input.value.trim();
 
-        if (!query) {
+        if (!query || requestInProgress) {
             return;
         }
+
+        const topic = activeTopic;
 
         appendMessage(query, "user");
         input.value = "";
 
-        appendMessage(
-            "Демонстрационный режим. Подключение AI-ассистента будет добавлено позже.",
-            "assistant"
-        );
+        requestInProgress = true;
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        if (submitButton) {
+            submitButton.disabled = true;
+        }
+
+        const waitingMessage = document.createElement("p");
+        waitingMessage.className = "ai-chat-message ai-chat-message-assistant";
+        waitingMessage.textContent = "AI-ассистент готовит ответ...";
+        messages.appendChild(waitingMessage);
+        messages.scrollTop = messages.scrollHeight;
+
+        try {
+            const response = await fetch("/api/chat.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    query: query,
+                    topic: topic
+                })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(
+                    data.error || "Не удалось получить ответ ассистента."
+                );
+            }
+
+            if (typeof data.answer !== "string" || !data.answer.trim()) {
+                throw new Error("Ассистент вернул пустой ответ.");
+            }
+
+            waitingMessage.textContent = data.answer;
+        } catch (error) {
+            waitingMessage.textContent =
+                error.message || "Ошибка соединения с AI-ассистентом.";
+        } finally {
+            requestInProgress = false;
+
+            if (submitButton) {
+                submitButton.disabled = false;
+            }
+
+            messages.scrollTop = messages.scrollHeight;
+        }
     });
 });

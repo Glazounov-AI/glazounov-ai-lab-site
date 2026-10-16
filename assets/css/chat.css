@@ -104,8 +104,22 @@
 
 /* Chat visual refinements */
 .ai-chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 16px;
     background: #2563eb;
     color: #fff;
+}
+
+.ai-chat-header > div {
+    min-width: 0;
+}
+
+.ai-chat-header .ai-chat-close {
+    flex-shrink: 0;
+    line-height: 1;
 }
 
 .ai-chat-tabs {
