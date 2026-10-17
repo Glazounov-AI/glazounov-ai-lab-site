@@ -20,13 +20,31 @@ jobs:
           SSH_HOST: ${{ vars.MAJORDOMO_HOST }}
           SSH_PORT: ${{ vars.MAJORDOMO_PORT }}
           SSH_KNOWN_HOST: ${{ vars.MAJORDOMO_KNOWN_HOST }}
+
         run: |
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          printf '%s\n' "$SSH_KEY" > ~/.ssh/majordomo_key
-          chmod 600 ~/.ssh/majordomo_key
-          printf '%s\n' "$SSH_KNOWN_HOST" > ~/.ssh/known_hosts
-          chmod 600 ~/.ssh/known_hosts
+          for attempt in 1 2 3 4 5; do
+            echo "Deployment attempt $attempt of 5"
+
+            if rsync -avzn --itemize-changes \
+              --exclude='.git/' \
+              --exclude='.github/' \
+              --exclude='docs/' \
+              --exclude='README.md' \
+              --exclude='.gitignore' \
+              -e "ssh -i ~/.ssh/majordomo_key -p $SSH_PORT -o BatchMode=yes -o ConnectTimeout=15 -o ConnectionAttempts=1" \
+              ./ "$SSH_USER@$SSH_HOST:/home/sevenskybarru/glazounov-ai.ru/www/"; then
+              echo "Deployment check succeeded"
+              exit 0
+            fi
+
+            if [ "$attempt" -lt 5 ]; then
+              echo "Connection failed; retrying in 10 seconds"
+              sleep 10
+            fi
+          done
+
+          echo "Deployment failed after 5 attempts"
+          exit 1
 
       - name: Upload website
         env:
