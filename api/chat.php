@@ -45,7 +45,15 @@ if (!in_array($topic, ['projects', 'about'], true)) {
     respond(400, ['error' => 'Неизвестная тема']);
 }
 
-$config = require __DIR__ . '/config.php';
+try {
+    $config = require __DIR__ . '/config.php';
+} catch (Throwable $e) {
+    error_log('Chat configuration error: ' . $e->getMessage());
+
+    respond(503, [
+        'error' => 'AI-ассистент временно недоступен'
+    ]);
+}
 
 if ($query === '' || strlen($query) > $config['max_query_length']) {
     respond(400, ['error' => 'Недопустимая длина вопроса']);
@@ -55,7 +63,7 @@ require_once __DIR__ . '/rate-limit.php';
 
 $clientIp = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 
-if (!checkRateLimit($clientIp)) {
+if (!checkRateLimit($clientIp, $config['rate_limit_dir'])) {
     header('Retry-After: 60');
     respond(429, ['error' => 'Слишком много запросов. Попробуйте позже']);
 }
@@ -86,6 +94,11 @@ curl_setopt_array($ch, [
 $result = curl_exec($ch);
 $status = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
 $failed = ($result === false);
+
+if ($failed) {
+    error_log('RAG API cURL error: ' . curl_error($ch));
+}
+
 curl_close($ch);
 
 if ($failed) {

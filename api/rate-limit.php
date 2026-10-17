@@ -1,11 +1,8 @@
 <?php
 declare(strict_types=1);
 
-function checkRateLimit(string $clientIp): bool
+function checkRateLimit(string $clientIp, string $directory): bool
 {
-    $directory = sys_get_temp_dir()
-        . DIRECTORY_SEPARATOR . 'glazounov-chat-rate-limit';
-
     if (!is_dir($directory) && !mkdir($directory, 0700, true) && !is_dir($directory)) {
         return false;
     }
@@ -28,10 +25,23 @@ function checkRateLimit(string $clientIp): bool
 
     rewind($handle);
     $contents = stream_get_contents($handle);
-    $data = json_decode($contents ?: '{}', true);
 
-    if (!is_array($data)) {
+    if ($contents === false) {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+        return false;
+    }
+
+    if ($contents === '') {
         $data = [];
+    } else {
+        $data = json_decode($contents, true);
+
+        if (json_last_error() !== JSON_ERROR_NONE || !is_array($data)) {
+            flock($handle, LOCK_UN);
+            fclose($handle);
+            return false;
+        }
     }
 
     foreach ($data as $key => $timestamps) {
@@ -71,11 +81,25 @@ function checkRateLimit(string $clientIp): bool
     }
 
     rewind($handle);
-    $written = fwrite($handle, $json);
-    $saved = $written !== false
-        && $written === strlen($json)
-        && ftruncate($handle, strlen($json))
-        && fflush($handle);
+
+    $total = strlen($json);
+    $written = 0;
+    $saved = true;
+
+    while ($written < $total) {
+        $bytes = fwrite($handle, substr($json, $written));
+
+        if ($bytes === false || $bytes === 0) {
+            $saved = false;
+            break;
+        }
+
+        $written += $bytes;
+    }
+
+    if ($saved) {
+        $saved = ftruncate($handle, $total) && fflush($handle);
+    }
 
     flock($handle, LOCK_UN);
     fclose($handle);
