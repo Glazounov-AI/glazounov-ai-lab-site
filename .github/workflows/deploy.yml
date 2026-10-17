@@ -39,7 +39,7 @@ jobs:
           for attempt in 1 2 3 4 5; do
             echo "Deployment attempt $attempt of 5"
 
-            if rsync -avzn --itemize-changes \
+            if rsync -avz --itemize-changes \
               --exclude='.git/' \
               --exclude='.github/' \
               --exclude='docs/' \
