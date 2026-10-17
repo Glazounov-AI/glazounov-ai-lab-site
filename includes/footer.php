@@ -22,5 +22,9 @@
     </div>
 </footer>
 
+<?php require __DIR__ . '/chat-widget.php'; ?>
+<link rel="stylesheet" href="/assets/css/chat.css">
+<script src="/assets/js/chat.js" defer></script>
+
 </body>
 </html>
