@@ -34,7 +34,7 @@ jobs:
           SSH_PORT: ${{ vars.MAJORDOMO_PORT }}
           SSH_USER: ${{ vars.MAJORDOMO_USER }}
         run: |
-          rsync -avz \
+          rsync -avzn --itemize-changes \
             --exclude='.git/' \
             --exclude='.github/' \
             --exclude='docs/' \
