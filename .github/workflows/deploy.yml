@@ -1,3 +1,4 @@
+
 name: Deploy website to Majordomo
 
 on:
@@ -17,10 +18,23 @@ jobs:
       - name: Configure SSH
         env:
           SSH_KEY: ${{ secrets.MAJORDOMO_SSH_KEY }}
+          SSH_KNOWN_HOST: ${{ vars.MAJORDOMO_KNOWN_HOST }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/majordomo_key
+          chmod 600 ~/.ssh/majordomo_key
+          printf '%s\n' "$SSH_KNOWN_HOST" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+          echo "Configured SSH host key fingerprint:"
+          ssh-keygen -lf ~/.ssh/known_hosts -E sha256
+
+      - name: Upload website
+        env:
           SSH_HOST: ${{ vars.MAJORDOMO_HOST }}
           SSH_PORT: ${{ vars.MAJORDOMO_PORT }}
-          SSH_KNOWN_HOST: ${{ vars.MAJORDOMO_KNOWN_HOST }}
-
+          SSH_USER: ${{ vars.MAJORDOMO_USER }}
         run: |
           for attempt in 1 2 3 4 5; do
             echo "Deployment attempt $attempt of 5"
@@ -45,18 +59,3 @@ jobs:
 
           echo "Deployment failed after 5 attempts"
           exit 1
-
-      - name: Upload website
-        env:
-          SSH_HOST: ${{ vars.MAJORDOMO_HOST }}
-          SSH_PORT: ${{ vars.MAJORDOMO_PORT }}
-          SSH_USER: ${{ vars.MAJORDOMO_USER }}
-        run: |
-          rsync -avzn --itemize-changes \
-            --exclude='.git/' \
-            --exclude='.github/' \
-            --exclude='docs/' \
-            --exclude='README.md' \
-            --exclude='.gitignore' \
-            -e "ssh -i ~/.ssh/majordomo_key -p $SSH_PORT -o BatchMode=yes" \
-            ./ "$SSH_USER@$SSH_HOST:/home/sevenskybarru/glazounov-ai.ru/www/"
