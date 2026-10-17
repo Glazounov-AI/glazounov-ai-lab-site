@@ -1,0 +1,44 @@
+name: Deploy website to Majordomo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure SSH
+        env:
+          SSH_KEY: ${{ secrets.MAJORDOMO_SSH_KEY }}
+          SSH_HOST: ${{ vars.MAJORDOMO_HOST }}
+          SSH_PORT: ${{ vars.MAJORDOMO_PORT }}
+          SSH_KNOWN_HOST: ${{ vars.MAJORDOMO_KNOWN_HOST }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/majordomo_key
+          chmod 600 ~/.ssh/majordomo_key
+          printf '%s\n' "$SSH_KNOWN_HOST" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Upload website
+        env:
+          SSH_HOST: ${{ vars.MAJORDOMO_HOST }}
+          SSH_PORT: ${{ vars.MAJORDOMO_PORT }}
+          SSH_USER: ${{ vars.MAJORDOMO_USER }}
+        run: |
+          rsync -avz \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='docs/' \
+            --exclude='README.md' \
+            --exclude='.gitignore' \
+            -e "ssh -i ~/.ssh/majordomo_key -p $SSH_PORT -o BatchMode=yes" \
+            ./ "$SSH_USER@$SSH_HOST:/home/sevenskybarru/glazounov-ai.ru/www/"
