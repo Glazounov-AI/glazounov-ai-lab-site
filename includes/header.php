@@ -59,7 +59,7 @@ $isHome = ($pageType === 'home');
             <a href="/portfolio/index.php">Проекты</a>
             <a href="<?php echo $isHome ? '#about' : '/index.php#about'; ?>">Обо мне</a>
             <a class="<?php echo $isHome ? 'nav-cta' : 'btn btn-small'; ?>"
-               href="<?php echo $isHome ? '#contact' : '/index.php#contact'; ?>">Связаться</a>
+               href="/contacts/">Связаться</a>
         </nav>
 
         <button class="menu-button" type="button" aria-label="Открыть меню">&#9776;</button>

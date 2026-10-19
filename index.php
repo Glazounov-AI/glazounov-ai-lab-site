@@ -30,7 +30,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
                         Посмотреть проекты 
                     </a>
 
-                    <a class="button secondary" href="#contact">
+                    <a class="button secondary" href="/contacts/">
                         Связаться
                     </a>
 
@@ -219,7 +219,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
                     Обсудим, как AI может помочь именно вам.
                 </p>
 
-                <a class="button primary" href="#">
+                <a class="button primary" href="/contacts/">
                     Связаться
                 </a>
 

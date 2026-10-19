@@ -14,8 +14,9 @@
         <p>© 2026 Glazounov AI Lab.</p>
 
         <nav>
-            <a href="<?php echo htmlspecialchars($telegramUrl, ENT_QUOTES, 'UTF-8'); ?>"
-               target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="/contacts/">Контакты</a>
+            <a href="<?php echo htmlspecialchars($telegramChannelUrl, ENT_QUOTES, 'UTF-8'); ?>"
+               target="_blank" rel="noopener noreferrer">Telegram-канал</a>
             <a href="<?php echo htmlspecialchars($githubUrl, ENT_QUOTES, 'UTF-8'); ?>"
                target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
