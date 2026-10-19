@@ -2,6 +2,7 @@
 $pageTitle = 'Контакты — Glazounov AI Lab';
 $pageDescription = 'Связаться с разработчиком AI-ассистентов, чат-ботов и решений для автоматизации.';
 $pageType = 'contact';
+$pageCss = '/assets/css/contacts.css';
 
 require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 ?>
@@ -13,16 +14,28 @@ require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
                 &larr; На главную
             </a>
 
-            <div class="project-hero-copy">
-                <p class="eyebrow">КОНТАКТЫ</p>
-                <h1>Обсудим вашу задачу</h1>
+            <div class="contacts-hero-grid">
+                <div class="project-hero-copy">
+                    <p class="eyebrow">КОНТАКТЫ</p>
+                    <h1>Обсудим вашу задачу</h1>
 
-                <p class="project-lead">
-                    Разрабатываю AI-ассистентов, чат-ботов
-                    и решения для автоматизации бизнес-процессов.
-                    Если у вас есть идея, задача или вопрос
-                    по проекту — напишите удобным способом.
-                </p>
+                    <p class="project-lead">
+                        Разрабатываю AI-ассистентов, чат-ботов
+                        и решения для автоматизации бизнес-процессов.
+                        Если у вас есть идея, задача или вопрос
+                        по проекту — напишите удобным способом.
+                    </p>
+                </div>
+
+                <div class="contacts-hero-visual">
+                    <img
+                        src="/assets/images/contacts-hero.png"
+                        alt="Рабочее пространство и цифровые коммуникации"
+                        width="1536"
+                        height="1024"
+                        fetchpriority="high"
+                    >
+                </div>
             </div>
         </div>
     </section>

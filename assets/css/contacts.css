@@ -1,0 +1,38 @@
+/* Contacts page */
+
+.contacts-page .project-hero {
+    padding: 34px 0 48px;
+}
+
+.contacts-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: 36px;
+}
+
+.contacts-hero-grid .project-hero-copy {
+    min-width: 0;
+}
+
+.contacts-hero-visual {
+    min-width: 0;
+}
+
+.contacts-hero-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+@media (max-width: 719px) {
+    .contacts-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contacts-hero-visual {
+        max-width: 480px;
+    }
+}
