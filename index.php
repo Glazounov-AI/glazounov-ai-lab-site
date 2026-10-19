@@ -206,7 +206,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
                     и делать рабочие процессы эффективнее.
                 </p>
 
-                <a href="#">Подробнее обо мне ></a>
+                <a href="/about/">Подробнее обо мне &rarr;</a>
 
             </div>
 

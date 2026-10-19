@@ -56,8 +56,8 @@ $isHome = ($pageType === 'home');
         </a>
 
         <nav class="main-nav" aria-label="Основная навигация">
-            <a href="/portfolio/index.php">Проекты</a>
-            <a href="<?php echo $isHome ? '#about' : '/index.php#about'; ?>">Обо мне</a>
+            <a href="/portfolio/">Проекты</a>
+            <a href="/about/">Обо мне</a>
             <a class="<?php echo $isHome ? 'nav-cta' : 'btn btn-small'; ?>"
                href="/contacts/">Связаться</a>
         </nav>
